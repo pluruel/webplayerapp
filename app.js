@@ -1,6 +1,11 @@
 const express = require('express'); // express 모듈 추가하기
 
 const app = express();
+
+var mariaDB = require(./maria-db);
+
+mariaDB.connect();
+
 const port = 8081;
 
 app.get('/', function(request, response) {
